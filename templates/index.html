@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage students and courses efficiently</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="total-students">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Courses</h3>
+                <p id="total-courses">0</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Add Student</h2>
+
+            <form id="student-form">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name"
+                    maxlength="100"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    maxlength="150"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    maxlength="20"
+                >
+
+                <select id="course" required>
+                    <option value="">Select Course</option>
+                    <option value="Python Full Stack">
+                        Python Full Stack
+                    </option>
+                    <option value="Java Full Stack">
+                        Java Full Stack
+                    </option>
+                    <option value="DevOps">
+                        DevOps
+                    </option>
+                </select>
+
+                <button type="submit">Add Student</button>
+
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="card">
+            <h2>Student Records</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Course</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="student-table">
+                        <tr>
+                            <td colspan="6">No students added yet.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="/static/app.js"></script>
+
+</body>
+</html>

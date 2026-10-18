@@ -1,0 +1,16 @@
+# Python virtual environments
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables and secrets
+.env
+
+# Local SQLite database
+students.db
+
+# Git
+.git/
